@@ -326,6 +326,10 @@ for (const p of pages) {
     }
   }
 
+  for (const m of p.html.matchAll(/<(?:link|script)\s[^>]*(?:href|src)="(\/[^"?#]+)/g)) {
+    if (!existsSync(join(out, m[1]))) errors.push(`${p.file}: Datei fehlt: ${m[1]}`);
+  }
+
   for (const m of p.html.matchAll(/<img\s[^>]*>/g)) {
     if (!/\salt="/.test(m[0])) errors.push(`${p.file}: Bild ohne alt-Attribut: ${m[0]}`);
   }

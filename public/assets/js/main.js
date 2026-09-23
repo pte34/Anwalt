@@ -67,8 +67,6 @@
   if (!form) return;
 
   var status = form.querySelector('.form-status');
-  var endpoint = form.getAttribute('data-endpoint');
-  var email = form.getAttribute('data-email');
   var messages = {
     name: 'Bitte geben Sie Ihren Namen an.',
     email: 'Bitte geben Sie eine gültige E-Mail-Adresse an.',
@@ -132,6 +130,8 @@
     }
     var data = new FormData(form);
     if (data.get('_gotcha')) return; // Spam-Schutz
+    var endpoint = form.getAttribute('data-endpoint');
+    var email = form.getAttribute('data-email');
 
     // Variante 1: Formulardienst (z. B. Formspree)
     if (endpoint) {
