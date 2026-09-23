@@ -168,7 +168,7 @@ function layout(meta, body) {
   <script>document.documentElement.classList.add('js')</script>
   <meta name="description" content="${esc(meta.description)}">${robots}
   <link rel="canonical" href="${url}">
-  <meta name="theme-color" content="#1d4a5a">
+  <meta name="theme-color" content="#7a223e">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <meta property="og:type" content="website">

@@ -1,5 +1,5 @@
 /* FD Anwaltskanzlei AG – Stylesheet
-   Mobile-first. Farben: Petrol (Vertrauen, Ruhe) + warmes Messing (Zugänglichkeit).
+   Mobile-first. Farben aus dem Logo: Weinrot (Kreis), Himbeerrot (Schriftzug), Salbei-Grau (Hintergrund).
    Alle Text-Farbkombinationen erfüllen mindestens WCAG AA. */
 
 @font-face {
@@ -18,29 +18,29 @@
 }
 
 :root {
-  --c-ink: #16212a;
-  --c-text: #2a3540;
-  --c-muted: #56616b;
-  --c-primary: #1d4a5a;
-  --c-primary-hover: #153845;
-  --c-primary-soft: #e7eff1;
-  --c-accent: #b08045;
-  --c-accent-text: #87581f;
-  --c-bg: #fbfaf7;
-  --c-sand: #f4efe6;
+  --c-ink: #2a1d23;
+  --c-text: #3b3236;
+  --c-muted: #635a5e;
+  --c-primary: #7a223e;
+  --c-primary-hover: #5f1a30;
+  --c-primary-soft: #f5e8ed;
+  --c-accent: #a52d55;
+  --c-accent-text: #a52d55;
+  --c-bg: #fbfbfa;
+  --c-sand: #edf2f0;
   --c-white: #ffffff;
-  --c-line: #e4ded3;
-  --c-dark: #122e38;
-  --c-dark-text: #d6e1e4;
-  --c-focus: #b06a12;
+  --c-line: #e2e7e5;
+  --c-dark: #3b1323;
+  --c-dark-text: #f0e2e7;
+  --c-focus: #c2456f;
 
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 
   --radius: 14px;
   --radius-sm: 10px;
-  --shadow-sm: 0 1px 2px rgb(22 33 42 / 0.06), 0 2px 8px rgb(22 33 42 / 0.04);
-  --shadow: 0 2px 4px rgb(22 33 42 / 0.05), 0 12px 32px rgb(22 33 42 / 0.08);
+  --shadow-sm: 0 1px 2px rgb(42 29 35 / 0.06), 0 2px 8px rgb(42 29 35 / 0.04);
+  --shadow: 0 2px 4px rgb(42 29 35 / 0.05), 0 12px 32px rgb(42 29 35 / 0.08);
   --header-h: 68px;
   --gutter: 20px;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -261,7 +261,7 @@ mark.todo {
 .btn-primary {
   background: var(--c-primary);
   color: var(--c-white);
-  box-shadow: 0 6px 16px rgb(29 74 90 / 0.22);
+  box-shadow: 0 6px 16px rgb(122 34 62 / 0.22);
 }
 .btn-primary:hover {
   background: var(--c-primary-hover);
@@ -270,7 +270,7 @@ mark.todo {
 .btn-secondary {
   background: var(--c-white);
   color: var(--c-primary);
-  border-color: #c9d8dc;
+  border-color: #e0c7d0;
 }
 .btn-secondary:hover {
   border-color: var(--c-primary);
@@ -322,7 +322,7 @@ mark.todo {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgb(251 250 247 / 0.92);
+  background: rgb(251 251 250 / 0.92);
   backdrop-filter: saturate(1.4) blur(10px);
   -webkit-backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid transparent;
@@ -330,7 +330,7 @@ mark.todo {
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--c-line);
-  box-shadow: 0 4px 20px rgb(22 33 42 / 0.05);
+  box-shadow: 0 4px 20px rgb(42 29 35 / 0.05);
 }
 .header-inner {
   display: flex;
@@ -353,30 +353,39 @@ mark.todo {
   text-decoration: none;
 }
 .logo-mark {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28em;
+  width: 46px;
+  height: 46px;
   flex: none;
-  border-radius: 10px;
+  border-radius: 50%;
   background: var(--c-primary);
   color: var(--c-white);
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: 0.02em;
-  box-shadow: inset 0 -3px 0 var(--c-accent);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.logo-mark i {
+  width: 1px;
+  height: 58%;
+  background: rgb(255 255 255 / 0.85);
 }
 .logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.25;
   min-width: 0;
 }
 .logo-name {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-accent-text);
   white-space: nowrap;
 }
 .logo-sub {
@@ -454,7 +463,7 @@ mark.todo {
   inset: var(--header-h) 0 auto 0;
   background: var(--c-bg);
   border-bottom: 1px solid var(--c-line);
-  box-shadow: 0 20px 40px rgb(22 33 42 / 0.12);
+  box-shadow: 0 20px 40px rgb(42 29 35 / 0.12);
   padding: 8px var(--gutter) 20px;
   visibility: hidden;
   opacity: 0;
@@ -559,8 +568,9 @@ html:not(.js) .nav-toggle {
     clip: auto;
   }
   .logo-mark {
-    width: 48px;
-    height: 48px;
+    width: 54px;
+    height: 54px;
+    font-size: 1.2rem;
   }
   .logo-name {
     font-size: 1.2rem;
@@ -579,7 +589,7 @@ html:not(.js) .nav-toggle {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
-  background: rgb(251 250 247 / 0.96);
+  background: rgb(251 251 250 / 0.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--c-line);
@@ -588,7 +598,7 @@ html:not(.js) .nav-toggle {
   min-height: 50px;
 }
 .mobile-cta .btn-light {
-  border-color: #c9d8dc;
+  border-color: #e0c7d0;
 }
 @media (min-width: 960px) {
   .mobile-cta {
@@ -606,8 +616,8 @@ html:not(.js) .nav-toggle {
   overflow: hidden;
   padding: 48px 0 64px;
   background:
-    radial-gradient(900px 480px at 100% 0%, rgb(29 74 90 / 0.09), transparent 70%),
-    radial-gradient(600px 400px at 0% 100%, rgb(176 128 69 / 0.08), transparent 70%);
+    radial-gradient(900px 480px at 100% 0%, rgb(122 34 62 / 0.09), transparent 70%),
+    radial-gradient(700px 460px at 0% 100%, rgb(143 175 163 / 0.22), transparent 70%);
 }
 .hero-grid {
   display: grid;
@@ -734,7 +744,7 @@ html:not(.js) .nav-toggle {
 .page-hero {
   padding: 48px 0 40px;
   background:
-    radial-gradient(800px 400px at 100% 0%, rgb(29 74 90 / 0.08), transparent 70%),
+    radial-gradient(800px 400px at 100% 0%, rgb(122 34 62 / 0.08), transparent 70%),
     var(--c-sand);
   border-bottom: 1px solid var(--c-line);
 }
@@ -851,7 +861,7 @@ html:not(.js) .nav-toggle {
   text-decoration: none;
   transform: translateY(-3px);
   box-shadow: var(--shadow);
-  border-color: #cddadd;
+  border-color: #e0c7d0;
 }
 .area-card h3 {
   margin: 18px 0 8px;
@@ -965,14 +975,15 @@ html:not(.js) .nav-toggle {
   border-radius: calc(var(--radius) + 8px);
   background:
     radial-gradient(circle at 30% 20%, rgb(255 255 255 / 0.12), transparent 60%),
-    linear-gradient(160deg, #24586a, var(--c-dark));
+    linear-gradient(160deg, #93304f, var(--c-dark));
   display: grid;
   place-items: center;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
 .portrait span {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+  font-weight: 200;
   font-size: clamp(4rem, 12vw, 7rem);
   color: rgb(255 255 255 / 0.9);
   letter-spacing: 0.04em;
@@ -1247,7 +1258,7 @@ img.portrait {
   font-size: 1rem; /* verhindert Zoom auf iOS */
   color: var(--c-ink);
   background: var(--c-bg);
-  border: 1.5px solid #bfc8ce;
+  border: 1.5px solid #c4c9c7;
   border-radius: var(--radius-sm);
   transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
 }
@@ -1261,7 +1272,7 @@ img.portrait {
   outline: none;
   background: var(--c-white);
   border-color: var(--c-primary);
-  box-shadow: 0 0 0 4px rgb(29 74 90 / 0.15);
+  box-shadow: 0 0 0 4px rgb(122 34 62 / 0.15);
 }
 .field [aria-invalid='true'] {
   border-color: #b3261e;
@@ -1330,7 +1341,7 @@ img.portrait {
 
 .cta-band {
   background:
-    radial-gradient(700px 360px at 100% 0%, rgb(176 128 69 / 0.22), transparent 70%),
+    radial-gradient(700px 360px at 100% 0%, rgb(190 60 105 / 0.35), transparent 70%),
     var(--c-primary);
   color: var(--c-white);
   padding: 56px 0;
@@ -1339,7 +1350,7 @@ img.portrait {
   color: var(--c-white);
 }
 .cta-band p {
-  color: #dce8eb;
+  color: #f3e3e9;
   max-width: 36rem;
   margin-bottom: 0;
 }
@@ -1409,7 +1420,17 @@ img.portrait {
   color: var(--c-white);
 }
 .brand-light .logo-sub {
-  color: #a9bcc2;
+  color: #d9bfca;
+}
+.brand-light .logo-name {
+  color: #f6dbe5;
+}
+.brand-light .logo-mark {
+  background: var(--c-white);
+  color: var(--c-primary);
+}
+.brand-light .logo-mark i {
+  background: var(--c-primary);
 }
 .footer-brand p {
   margin-top: 16px;
@@ -1421,7 +1442,7 @@ img.portrait {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #a9bcc2;
+  color: #d9bfca;
   margin-bottom: 16px;
 }
 .footer-list,
@@ -1454,7 +1475,7 @@ img.portrait {
   padding-top: 24px;
   border-top: 1px solid rgb(255 255 255 / 0.12);
   font-size: 0.9rem;
-  color: #a9bcc2;
+  color: #d9bfca;
 }
 .footer-bottom p {
   margin: 0;

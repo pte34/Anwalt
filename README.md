@@ -52,7 +52,7 @@ Die Texte wurden **neu verfasst**, weil die alte Website nicht zugänglich war. 
 - **Impressum und Datenschutz**: Das sind Entwürfe. Bitte Handelsregister, UID, Anwaltsregister und Aufsichtsbehörde prüfen und Hosting-Anbieter sowie Formulardienst eintragen.
 - Aussagen wie „Antwort in der Regel innerhalb eines Arbeitstages“ (Kontaktseite) nur stehen lassen, wenn sie zutreffen.
 
-**Logo:** Aktuell ist ein Platzhalter-Logo („FD“ in Petrol/Messing) eingesetzt. Liegt das Original-Logo vor, als `public/assets/img/logo.svg` (oder .png) ablegen und in `src/partials/logo.html` einbinden. Die Farben stehen oben in `public/assets/css/style.css` (`--c-primary`, `--c-accent`) und lassen sich dort ans Logo anpassen.
+**Logo und Farben:** Das Farbschema stammt aus dem Kanzlei-Logo: Weinrot `#7a223e` (Kreis), Himbeerrot `#a52d55` (Schriftzug) und Salbei-Grau `#edf2f0` (Flächen). Das Logo („F|D“ im Kreis + „ANWALTSKANZLEI“) ist als HTML/SVG nachgebaut (`src/partials/logo.html`, `public/assets/img/logo.svg`). Liegt die Original-Logodatei als SVG vor, kann sie dort eingesetzt werden. Die Farben stehen oben in `public/assets/css/style.css`.
 
 ## 3. Kontaktformular einrichten
 
