@@ -1,0 +1,17 @@
+# Serverseitige Weiterleitungen und Caching (Apache)
+ErrorDocument 404 /404.html
+RedirectMatch 301 ^/ueber-mich-anwaeltin/?$ /ueber-mich/
+RedirectMatch 301 ^/ueber-mich-anwaltin/?$ /ueber-mich/
+RedirectMatch 301 ^/datenschutzerklaerung/?$ /datenschutz/
+RedirectMatch 301 ^/home/?$ /
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(woff2|svg|png|jpg|jpeg|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

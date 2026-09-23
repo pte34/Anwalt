@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="/">{{partial:logo}}</a>
+      <p>Anwaltskanzlei in Bülach für Privatpersonen und KMU aus dem Zürcher Unterland.</p>
+    </div>
+    <div>
+      <h2 class="footer-title">Kontakt</h2>
+      <ul class="footer-list" role="list">
+        <li>{{icon:pin}}<span>{{name}}<br>{{street}}<br>{{zip}} {{city}}</span></li>
+        <li>{{icon:phone}}<a href="{{phoneHref}}">{{phoneDisplay}}</a></li>
+        <li>{{icon:mail}}<a href="{{emailHref}}">{{emailDisplay}}</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Rechtsgebiete</h2>
+      <ul class="footer-links" role="list">
+        <li><a href="/dienstleistungen/#familienrecht">Familienrecht</a></li>
+        <li><a href="/dienstleistungen/#erbrecht">Erbrecht</a></li>
+        <li><a href="/dienstleistungen/#arbeitsrecht">Arbeitsrecht</a></li>
+        <li><a href="/dienstleistungen/#mietrecht">Mietrecht</a></li>
+        <li><a href="/dienstleistungen/#schkg">Schuldbetreibungs- und Konkursrecht</a></li>
+        <li><a href="/dienstleistungen/#vertragsrecht">Allgemeines Vertragsrecht</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Kanzlei</h2>
+      <ul class="footer-links" role="list">
+        <li><a href="/konditionen/">Konditionen</a></li>
+        <li><a href="/ueber-mich/">Über mich</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{year}} {{name}}</p>
+    <ul class="footer-legal" role="list">
+      <li><a href="/impressum/">Impressum</a></li>
+      <li><a href="/datenschutz/">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="{{phoneHref}}">{{icon:phone}}<span>{{callLabel}}</span></a>
+  <a class="btn btn-light" href="/kontakt/#anfrage">{{icon:mail}}<span>Anfrage</span></a>
+</div>
